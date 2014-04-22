@@ -1,0 +1,7 @@
+setup.py
+jerk/__init__.py
+jerk/jerk.py
+jerk.egg-info/PKG-INFO
+jerk.egg-info/SOURCES.txt
+jerk.egg-info/dependency_links.txt
+jerk.egg-info/top_level.txt
