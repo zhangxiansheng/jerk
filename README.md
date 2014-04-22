@@ -11,5 +11,28 @@ His mind is just to pay attention to summing up some tips from our daily coding 
 Installation
 ====
 
+It is recommended to use pip to install jerkpy.
+<pre>
+$ pip install jerk
+</pre>
+
+Another way is to download it from this git or <a href="https://pypi.python.org/pypi?name=jerk&version=0.1&:action=display">pypi</a>, and then to install it manually via <code>$ python setup.py install</code>
+
+
+Get started
+====
+
+<h2>import</h2>
+<b>how to import it</b>,like this below:
+<pre>
+from jerk import *
+</pre>
+
+
+References
+====
+
+<h2>xlen</h2>
+<b><code>xlen( lst, start=0, step=1 )</code></b>
 
 
