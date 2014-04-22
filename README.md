@@ -77,6 +77,7 @@ Most of this api is the function combination of "xrange()" and "len()". (The res
 In python, if we want to get a nearest int number from a float number, we must use <code>int( round( object<"float"> ) )</code>. For coding less letters and brackets, <code>xint(a)</code> has given into birth.<br>
 In addtion, if we want to make all the float numbers in a set or a dict or a list or a tuple to be transformed as int numbers, <code>int( round( object<"float"> ) )</code> can't do the job because his object input must be only one float numbers. But <code>xlen(a)</code> can do with all the things except a cyclic tree dict of course.
 <br>
+
 <b>Examples:</b>
 <pre>
 from jerk import *
