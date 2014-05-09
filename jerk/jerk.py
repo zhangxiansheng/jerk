@@ -60,6 +60,65 @@ def xint( a ):
 
 
 
+<<<<<<< HEAD
+#list can only do with one tuple but not the element in the tuple
+#but xlist() can do it
+def xlist( a ):
+    '''
+    将所有的tuple元素变成list
+    '''
+    
+    if isinstance( a, (int, str, float) ):
+        #a is int or str
+        return a
+    
+    elif isinstance( a, set ):
+        #a is set
+        return { xlist(i) for i in a }
+
+    elif isinstance( a, list ):
+        #a is list
+        return [ xlist(i) for i in a ]
+
+    elif isinstance( a, tuple ):
+        #a is tuple
+        return [ xlist(i) for i in a ]
+
+    elif isinstance( a, dict ):
+        #a is dict
+        return { xlist(key):xlist(value) for key,value in a.iteritems() }
+
+
+
+#tuple can only do with one list but not the element in the tuple
+#but xtuple() can do it
+def xtuple( a ):
+    '''
+    将所有的list元素变成tuple
+    '''
+    
+    if isinstance( a, (int, str, float) ):
+        #a is int or str
+        return a
+    
+    elif isinstance( a, set ):
+        #a is set
+        return { xtuple(i) for i in a }
+
+    elif isinstance( a, list ):
+        #a is list
+        return tuple( [ xtuple(i) for i in a ] )
+
+    elif isinstance( a, tuple ):
+        #a is tuple
+        return tuple( [ xtuple(i) for i in a ] )
+
+    elif isinstance( a, dict ):
+        #a is dict
+        return { xtuple(key):xtuple(value) for key,value in a.iteritems() }
+
+=======
+>>>>>>> bab221a0e9baa1aa506fd5f0cf074653db7bbf76
 
 
 
@@ -91,3 +150,12 @@ if __name__ == "__main__":
           'jerk.py':(0.93, 23.2234333, 54, [23.2, 3.23323, {2.2:-0.1}]), \
                '23':-0.999 }
     print "a = {},\nxint(a)={}\n".format( a, xint (a) )
+<<<<<<< HEAD
+
+
+    #Have a test with xlist
+    print xlist( (1,2,3,(3,23),(3,(3,3))) )
+    #Have a test with xtuple
+    print xtuple( [1,2,[3,[2,2]],{3:3},set()] )
+=======
+>>>>>>> bab221a0e9baa1aa506fd5f0cf074653db7bbf76

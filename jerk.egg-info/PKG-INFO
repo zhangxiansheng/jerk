@@ -1,6 +1,10 @@
 Metadata-Version: 1.0
 Name: jerk
+<<<<<<< HEAD
+Version: 0.2
+=======
 Version: 0.1
+>>>>>>> bab221a0e9baa1aa506fd5f0cf074653db7bbf76
 Summary: Jerk is to make python more python
 Home-page: https://github.com/zhangxiansheng/jerk
 Author: Zhang Yiwei
