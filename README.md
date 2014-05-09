@@ -4,7 +4,7 @@ jerk
 A simple python library to make python more python.
 Jerkpy is a simple and jerkful library to do some easy function more easily and more jerkfully.
 
-Now he has only two APIs, welcome to develop him together.
+Now he has only four APIs, welcome to develop him together.
 
 His mind is just to pay attention to summing up some tips from our daily coding life and make it true to be a esier using funcitonal APIs, when we are in troubles, they maybe come in handy.
 
@@ -99,15 +99,46 @@ print "a = {},\nxint(a)={}\n".format( a, xint (a) )
 >>> a = 0.93,
 >>> xint(a)=1
 >>> 
->>> a = [0.93, (291.1232332, 23.2323311)],
+>>> a = [0.93, (291.1232332, 23.2323311)]
 >>> xint(a)=[1, (291, 23)]
 >>> 
->>> a = (0.93, 23.23, 54, [23.2, 3], '23'),
+>>> a = (0.93, 23.23, 54, [23.2, 3], '23')
 >>> xint(a)=(1, 23, 54, [23, 3], '23')
 >>> 
->>> a = {0.93: 239, 'jerk.py': (0.93, 23.2234333, 54, [23.2, 3.23323, {2.2: -0.1}]), '23': -0.999},
+>>> a = {0.93: 239, 'jerk.py': (0.93, 23.2234333, 54, [23.2, 3.23323, {2.2: -0.1}]), '23': -0.999}
 >>> xint(a)={1: 239, 'jerk.py': (1, 23, 54, [23, 3, {2: 0}]), '23': -1}
 </pre>
 
+
+<h2>xlist</h2>
+<b><code>xlist( a )</code></b><br>
+In python, if we want to get a list from a tuple, we can use <code>list()</code>. But it can not do with the elements in the tuple. So <code>xlist()</code> is recommended to use.
+<br>
+
+<b>Examples:</b>
+<pre>
+>>> from jerk import *
+>>> 
+>>> a = (0.93, (291.1232332, 23.2323311), (3,33), (3, (3, 3)), {3: 'tutorial'}, set([1, 2, 3]))
+>>> print xlist(a)
+>>> [0.93, [291.1232332, 23.2323311], [3, 33], [3, [3, 3]], {3: 'tutorial'}, set([1, 2, 3])]
+</pre>
+
+
+<h2>xtuple</h2>
+<b><code>xtuple( a )</code></b><br>
+In python, if we want to get a tuple from a list, we can use <code>tuple()</code>. But it can not do with the elements in the list. So <code>xtuple()</code> is recommended to use.
+<br>
+
+<b>Examples:</b>
+<pre>
+>>> from jerk import *
+>>> 
+>>> a = [0.93, [291.1232332, 23.2323311], [3, 33], [3, [3, 3]], {3: 'tutorial'}, set([1, 2, 3])]
+>>> print xtuple(a)
+>>>(0.93, (291.1232332, 23.2323311), (3, 33), (3, (3, 3)), {3: 'tutorial'}, set([1, 2, 3]))
+</pre>
+
+
 <br><br>
-It only has two APIs now. Welcome to discuss which function def can make python esier and faster coding. Python is a very human language, which will be learned by every children in future.
+It only has four APIs now. Welcome to discuss which function def can make python esier and faster coding. Python is a very human language, which will be learned by every children in future.
