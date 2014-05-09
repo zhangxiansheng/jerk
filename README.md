@@ -16,7 +16,7 @@ It is recommended to use pip to install jerkpy.
 $ pip install jerk
 </pre>
 
-Another way is to download it from this git or <a href="https://pypi.python.org/pypi?name=jerk&version=0.1&:action=display">pypi</a>, and then to install it manually via <code>$ python setup.py install</code>
+Another way is to download it from this git or <a href="https://pypi.python.org/pypi/jerk/0.2">pypi</a>, and then to install it manually via <code>$ python setup.py install</code>
 
 
 Get started
