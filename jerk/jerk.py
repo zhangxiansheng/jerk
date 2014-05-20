@@ -9,153 +9,139 @@ Jerk.py 是一个简短的python库，
 '''
 
 
-
 #we can use "enumerate" to get both index and element
 #but for an obsessive-compulsive programmer
 #he need an easy function to get only the index in an easy ways
-def xlen( lst, start=0, step=1 ):
+def xlen(lst, start=0, step=1):
     '''用xlen函数直接获得一个列表的索引'''
-    return xrange( start, start+len(lst), step )
-
+    return xrange(start, start + len(lst), step)
 
 
 #to get the most nearest int from float
-#we must use int(round( object<"float"> ))
+#we must use int(round(object<"float">))
 #it is too many letters and brackets to need to be coded.
 #
 #int() and round() can only do with one float number
 #they can't do with a list or a dic or a set()
 #but xint() can do it
-def xint( a ):
+def xint(a):
     '''
     用xint代替int()与round()的组合
     而且xint()可以使一个多维的数组列表、dict、set、tuple中的
     所有的float变成其最接近的整数
     不过不要传入循环dict
     '''
-    
-    if isinstance( a, (int, str) ):
+
+    if isinstance(a, (int, str)):
         #a is int or str
         return a
-    
-    elif isinstance( a, float ):
+
+    elif isinstance(a, float):
         #a is float
         return int(round(a))
-    
-    elif isinstance( a, set ):
+
+    elif isinstance(a, set):
         #a is set
-        return { xint(i) for i in a }
+        return {xint(i) for i in a}
 
-    elif isinstance( a, list ):
+    elif isinstance(a, list):
         #a is list
-        return [ xint(i) for i in a ]
+        return [xint(i) for i in a]
 
-    elif isinstance( a, tuple ):
+    elif isinstance(a, tuple):
         #a is tuple
-        return tuple( [ xint(i) for i in a ] )
+        return tuple([xint(i) for i in a])
 
-    elif isinstance( a, dict ):
+    elif isinstance(a, dict):
         #a is dict
-        return { xint(key):xint(value) for key,value in a.iteritems() }
+        return {xint(key): xint(value) for key, value in a.iteritems()}
 
 
-
-<<<<<<< HEAD
 #list can only do with one tuple but not the element in the tuple
 #but xlist() can do it
-def xlist( a ):
+def xlist(a):
     '''
     将所有的tuple元素变成list
     '''
-    
-    if isinstance( a, (int, str, float) ):
+
+    if isinstance(a, (int, str, float)):
         #a is int or str
         return a
-    
-    elif isinstance( a, set ):
+
+    elif isinstance(a, set):
         #a is set
-        return { xlist(i) for i in a }
+        return {xlist(i) for i in a}
 
-    elif isinstance( a, list ):
+    elif isinstance(a, list):
         #a is list
-        return [ xlist(i) for i in a ]
+        return [xlist(i) for i in a]
 
-    elif isinstance( a, tuple ):
+    elif isinstance(a, tuple):
         #a is tuple
-        return [ xlist(i) for i in a ]
+        return [xlist(i) for i in a]
 
-    elif isinstance( a, dict ):
+    elif isinstance(a, dict):
         #a is dict
-        return { xlist(key):xlist(value) for key,value in a.iteritems() }
-
+        return {xlist(key): xlist(value) for key, value in a.iteritems()}
 
 
 #tuple can only do with one list but not the element in the tuple
 #but xtuple() can do it
-def xtuple( a ):
+def xtuple(a):
     '''
     将所有的list元素变成tuple
     '''
-    
-    if isinstance( a, (int, str, float) ):
+
+    if isinstance(a, (int, str, float)):
         #a is int or str
         return a
-    
-    elif isinstance( a, set ):
+
+    elif isinstance(a, set):
         #a is set
-        return { xtuple(i) for i in a }
+        return {xtuple(i) for i in a}
 
-    elif isinstance( a, list ):
+    elif isinstance(a, list):
         #a is list
-        return tuple( [ xtuple(i) for i in a ] )
+        return tuple([xtuple(i) for i in a])
 
-    elif isinstance( a, tuple ):
+    elif isinstance(a, tuple):
         #a is tuple
-        return tuple( [ xtuple(i) for i in a ] )
+        return tuple([xtuple(i) for i in a])
 
-    elif isinstance( a, dict ):
+    elif isinstance(a, dict):
         #a is dict
-        return { xtuple(key):xtuple(value) for key,value in a.iteritems() }
-
-=======
->>>>>>> bab221a0e9baa1aa506fd5f0cf074653db7bbf76
-
+        return {xtuple(key): xtuple(value) for key, value in a.iteritems()}
 
 
 if __name__ == "__main__":
-    
+
     #Have a test with xlen
-    lst_test = [1,2,3,4]
-    for i in xlen( lst_test ):
+    lst_test = [1, 2, 3, 4]
+    for i in xlen(lst_test):
         print i
     print "____________"
 
-    for i in xlen( lst_test,1 ):
+    for i in xlen(lst_test, 1):
         print i
     print "____________"
 
-    for i in xlen( lst_test,1,2 ):
+    for i in xlen(lst_test, 1, 2):
         print i
     print "____________"
-
 
     #have a test with xint
     a = 0.93
-    print "a = {},\nxint(a)={}\n".format( a, xint (a) )
-    a = [ 0.93, (291.1232332, 23.2323311) ]
-    print "a = {},\nxint(a)={}\n".format( a, xint (a) )
-    a = ( 0.93, 23.23, 54, [23.2, 3], '23' )
-    print "a = {},\nxint(a)={}\n".format( a, xint (a) )
-    a = {      0.93:239, \
-          'jerk.py':(0.93, 23.2234333, 54, [23.2, 3.23323, {2.2:-0.1}]), \
-               '23':-0.999 }
-    print "a = {},\nxint(a)={}\n".format( a, xint (a) )
-<<<<<<< HEAD
-
+    print "a = {},\nxint(a)={}\n".format(a, xint(a))
+    a = [0.93, (291.1232332, 23.2323311)]
+    print "a = {},\nxint(a)={}\n".format(a, xint(a))
+    a = (0.93, 23.23, 54, [23.2, 3], '23')
+    print "a = {},\nxint(a)={}\n".format(a, xint(a))
+    a = {0.93: 239,
+         'jerk.py': (0.93, 23.2234333, 54, [23.2, 3.23323, {2.2:-0.1}]),
+         '23': -0.999}
+    print "a = {},\n xint(a)={}\n".format(a, xint(a))
 
     #Have a test with xlist
-    print xlist( (1,2,3,(3,23),(3,(3,3))) )
+    print xlist((1, 2, 3, (3, 23), (3, (3, 3))))
     #Have a test with xtuple
-    print xtuple( [1,2,[3,[2,2]],{3:3},set()] )
-=======
->>>>>>> bab221a0e9baa1aa506fd5f0cf074653db7bbf76
+    print xtuple([1, 2, [3, [2, 2]], {3: 3}, set()])
